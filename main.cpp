@@ -1,5 +1,34 @@
 #include <iostream>
 
+void printMenu();
+
+int getUserOption();
+
+void printHelp();
+
+void printMarketStats();
+
+void enterOffer();
+
+void enterBid();
+
+void printWallet();
+
+void goToNextTimeFrame();
+
+void processUserOption(int userOption);
+
+int main()
+{
+    while (true)
+    {
+        printMenu();
+        int userOption = getUserOption();
+        processUserOption(userOption);
+    }
+
+    return 0;
+}
 void printMenu()
 {
     // 1 print help
@@ -30,6 +59,7 @@ void printHelp()
     std::cout << "Help - your aim to make money . analyse the market and make bids and offers ." << std::endl;
 }
 void printMarketStats()
+
 {
     std::cout << "market looks good ." << std::endl;
 }
@@ -79,15 +109,4 @@ void processUserOption(int userOption)
     {
         goToNextTimeFrame();
     }
-}
-int main()
-{
-    while (true)
-    {
-        printMenu();
-        int userOption = getUserOption();
-        processUserOption(userOption);
-    }
-
-    return 0;
 }
